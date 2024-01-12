@@ -58,3 +58,6 @@ start_button.pack(pady=20)
 
 # print the result
 print(f"The Biggest Number is: {biggest}")
+
+# run the Tkinter event loop
+app.mainloop()
