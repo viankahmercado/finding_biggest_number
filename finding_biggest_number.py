@@ -3,6 +3,9 @@
 
 # pseudocode
 # ask user to input three numbers
+
+import tkinter as tk
+
 number_1 = float(input("Enter the first number: "))
 number_2 = float(input("Enter the second number: "))
 number_3 = float(input("Enter the third number: "))
@@ -20,6 +23,10 @@ elif number_3 >= number_1 >= number_2:
     largest = number_3
 else:
     largest = number_3
-    
+
+# create the first window
+app = tk.Tk()
+app.title("Find the Largest Number")
+
 # print the result
 print(f"The largest number is: {largest}")
