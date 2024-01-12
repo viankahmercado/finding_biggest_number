@@ -53,11 +53,15 @@ def calculate_biggest():
 
 # create the main application window
 app = tk.Tk()
-app.title("Find the Biggest Number")
+app.title("Finding the Biggest Number")
+app.geometry("400x400")
 
 # create a button to start the program
-start_button = tk.Button(app, text="Let's Start!", command=calculate_biggest)
-start_button.pack(pady=20)
+label_description = tk.Label(text="BIGGEST NUMBER SIMULATOR", font=('Helvetica',15), bd=4, relief="sunken")
+label_description.place(relx=0.5, rely=0.3, anchor="center")
+
+start_button = tk.Button(app, text="Let's Start!", command=calculate_biggest, font=('Helvetica',15), bd=4, bg='#FF5733', fg='white')
+start_button.place(relx=0.5, rely=0.5, anchor="center")
 
 # run the Tkinter event loop
 app.mainloop()
