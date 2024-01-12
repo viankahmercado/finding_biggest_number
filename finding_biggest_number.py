@@ -5,6 +5,7 @@
 # ask user to input three numbers
 
 import tkinter as tk
+from tkinter import simpledialog, messagebox
 
 def get_inputted_number(prompt):
     while True:
