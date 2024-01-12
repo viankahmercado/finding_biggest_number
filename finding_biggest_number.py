@@ -1,9 +1,6 @@
 # Assignment 4
 # Ask user to input 3 numbers. Find and print the biggest number using only if-else statement 
 
-# pseudocode
-# ask user to input three numbers
-
 import tkinter as tk
 from tkinter import simpledialog, messagebox
 
@@ -39,7 +36,7 @@ def find_biggest_number(number_1, number_2, number_3):
 
 # get user input for three numbers
 def calculate_biggest():
-     try:
+    try:
         first_number = get_inputted_number("Enter the first number:")
         second_number = get_inputted_number("Enter the second number:")
         third_number = get_inputted_number("Enter the third number:")
@@ -47,17 +44,20 @@ def calculate_biggest():
         # Display an error message for invalid input
         messagebox.showerror("Error", str(e))
         return
+    
+    # Find the biggest number using the defined function
+    largest_number = find_biggest_number(first_number, second_number, third_number)
 
-# create the first window
+    # Display the result using a message box
+    messagebox.showinfo("Result", f"The Biggest Number is: {largest_number}")
+
+# create the main application window
 app = tk.Tk()
-app.title("Finding the Biggest Number")
+app.title("Find the Biggest Number")
 
 # create a button to start the program
 start_button = tk.Button(app, text="Let's Start!", command=calculate_biggest)
 start_button.pack(pady=20)
-
-# print the result
-print(f"The Biggest Number is: {biggest}")
 
 # run the Tkinter event loop
 app.mainloop()
