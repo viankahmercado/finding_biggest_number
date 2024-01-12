@@ -22,3 +22,4 @@ else:
     largest = number_3
     
 # print the result
+print(f"The largest number is: {largest}")
