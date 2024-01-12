@@ -28,5 +28,9 @@ else:
 app = tk.Tk()
 app.title("Finding the Biggest Number")
 
+# create a button to start the program
+start_button = tk.Button(app, text="Let's Start!", command=calculate_biggest)
+start_button.pack(pady=20)
+
 # print the result
-print(f"The largest number is: {biggest}")
+print(f"The Biggest Number is: {biggest}")
