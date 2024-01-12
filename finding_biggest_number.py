@@ -12,21 +12,21 @@ number_3 = float(input("Enter the third number: "))
 
 # find the biggest number among the three (algorithm)
 if number_1 >= number_2 >= number_3:
-    largest = number_1
+    biggest = number_1
 elif number_1 >= number_3 >= number_2:
-    largest = number_1
+    biggest = number_1
 elif number_2 >= number_1 >= number_3:
-    largest = number_2
+    biggest = number_2
 elif number_2 >= number_3 >= number_1:
-    largest = number_2
+    biggest = number_2
 elif number_3 >= number_1 >= number_2:
-    largest = number_3
+    biggest = number_3
 else:
-    largest = number_3
+    biggest = number_3
 
 # create the first window
 app = tk.Tk()
-app.title("Find the Largest Number")
+app.title("Finding the Biggest Number")
 
 # print the result
-print(f"The largest number is: {largest}")
+print(f"The largest number is: {biggest}")
