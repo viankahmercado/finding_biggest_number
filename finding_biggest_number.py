@@ -6,9 +6,18 @@
 
 import tkinter as tk
 
-number_1 = float(input("Enter the first number: "))
-number_2 = float(input("Enter the second number: "))
-number_3 = float(input("Enter the third number: "))
+def get_inputted_number(prompt):
+    while True:
+        try:
+            # Use simpledialog to get inputted number
+            user_input = simpledialog.askfloat("Input", prompt)
+            if user_input is not None:
+                return user_input
+            else:
+                raise ValueError("Please enter a valid number.")
+        except ValueError as e:
+            # Show an error message if the input is not a valid number
+            messagebox.showerror("Error", str(e))
 
 # find the biggest number among the three using if-else (algorithm)
 def find_biggest_number(number_1, number_2, number_3):
